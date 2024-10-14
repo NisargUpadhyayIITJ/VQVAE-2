@@ -1,0 +1,7 @@
+numpy
+tqdm
+argparse
+datetime
+pathlib
+matplotlib
+wandb
