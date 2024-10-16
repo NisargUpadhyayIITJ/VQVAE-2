@@ -4,7 +4,7 @@ from types import SimpleNamespace
     -- VQ-VAE-2 Hyperparameters --
 """
 _common = {
-    'checkpoint_frequency':         9,
+    'checkpoint_frequency':         4,
     'image_frequency':              1,
     'test_size':                    0.1,
     'nb_workers':                   4,
@@ -254,8 +254,8 @@ _cifar10 = {
 _ffhq256 = {
     'display_name':                 'FFHQ256',
 
-    'batch_size':                   8,
-    'mini_batch_size':              1,
+    'batch_size':                   128,
+    'mini_batch_size':              16,
     'learning_rate':                3e-4,
     'max_epochs':                   100,
 
