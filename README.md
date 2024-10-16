@@ -45,7 +45,7 @@ Other useful flags:
 Discrete Prior Usage
 Run level level PixelSnail discrete prior training using the config task_name found in hps.py using latent dataset saved at path latent_dataset.pt and VQ-VAE vqvae_path to dequantize conditioning variables. Defaults to cifar10:
 
-python main-pixelsnail.py latent_dataset.pt vqvae_path.pt level --task task_name
+python main-pixelsnail.py latent_dataset.pt vqvae_path.pt level(0) --task task_name
 Other useful flags:
 
 --cpu           # do not use GPU
