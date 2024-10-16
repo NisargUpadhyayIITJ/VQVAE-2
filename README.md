@@ -12,7 +12,7 @@ This project will not only contain the VQ-VAE-2 architecture, but also an exampl
 
 This project is very much Work-in-Progress. VQ-VAE-2 model is mostly complete. PixelSnail prior models are still experimental and most definitely do not work.
 
-Usage
+## Usage
 VQ-VAE-2 Usage
 
 Run VQ-VAE-2 training using the config task_name found in hps.py. Defaults to cifar10:
@@ -38,7 +38,7 @@ Other useful flags:
 
 --save-jpg      # save all images as jpg instead of png, useful for extreme resolutions
 
-##Latent Dataset Generation
+## Latent Dataset Generation
 
 Run latent dataset generation using VQ-VAE-2 saved at path that was trained on task task_name. Defaults to cifar10:
 
@@ -58,7 +58,7 @@ Other useful flags:
 
 --no-amp        # disables using native AMP (Automatic Mixed Precision) operations
 
-##Discrete Prior Usage
+## Discrete Prior Usage
 
 Run level level PixelSnail discrete prior training using the config task_name found in hps.py using latent dataset saved at path 
 latent_dataset.pt and VQ-VAE vqvae_path to dequantize conditioning variables. Defaults to cifar10:
@@ -79,7 +79,7 @@ Other useful flags:
 
 --no-save       # disables saving of files
 
-##Sample Generation
+## Sample Generation
 
 Run sampling script on trained VQ-VAE-2 and PixelSnail priors using the config task_name (default cifar10) found in hps.py. The first positional argument is the path to the VQ-VAE-2 checkpoint. The remaining L positional arguments are the PixelSnail prior checkpoints from level 0 to L.
 
