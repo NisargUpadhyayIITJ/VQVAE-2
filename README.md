@@ -14,25 +14,36 @@ This project is very much Work-in-Progress. VQ-VAE-2 model is mostly complete. P
 
 Usage
 VQ-VAE-2 Usage
+
 Run VQ-VAE-2 training using the config task_name found in hps.py. Defaults to cifar10:
 
 python main-vqvae.py --task task_name
+
 Evaluate VQ-VAE-2 from parameters state_dict_path on task task_name. Defaults to cifar10:
 
 python main-vqvae.py --task task_name --load-path state_dict_path --evaluate
 Other useful flags:
 
 --no-save       # disables saving of files during training
+
 --cpu           # do not use GPU
+
 --batch-size    # overrides batch size in cfg.py, useful for evaluating on larger batch size
+
 --no-tqdm       # disable tqdm status bars
+
 --no-save       # disables saving of files
+
 --no-amp        # disables using native AMP (Automatic Mixed Precision) operations
+
 --save-jpg      # save all images as jpg instead of png, useful for extreme resolutions
+
 Latent Dataset Generation
+
 Run latent dataset generation using VQ-VAE-2 saved at path that was trained on task task_name. Defaults to cifar10:
 
 python main-latents.py path --task task_name
+
 Result is saved in latent-data directory.
 
 Other useful flags:
